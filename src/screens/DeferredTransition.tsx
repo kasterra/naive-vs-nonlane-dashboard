@@ -18,7 +18,7 @@ import { computeDashboard } from "@/lib/compute";
 const Charts = lazy(() => import("./parts/Charts"));
 const TablePane = lazy(() => import("./parts/Table"));
 
-export default function NonLane() {
+export default function DeferredTransition() {
   const [data, setData] = useState(() => getDataset());
 
   // initial dates: last 30 days
@@ -46,7 +46,9 @@ export default function NonLane() {
     [filters.startDate, filters.endDate, filters.segment, deferredQuery]
   );
 
-  const [derived, setDerived] = useState(() => computeDashboard(data, effectiveFilters));
+  const [derived, setDerived] = useState(() =>
+    computeDashboard(data, effectiveFilters)
+  );
   const [isPending, startTransition] = useTransition();
 
   // re-run heavy compute in a transition when data or effective filters change
@@ -90,7 +92,7 @@ export default function NonLane() {
   return (
     <div className="p-6 space-y-6">
       <h1 className="text-2xl font-semibold">
-        Non-Lane Dashboard (Concurrent)
+        Deffered Transition Dashboard (Concurrent)
       </h1>
 
       {/* Filters */}

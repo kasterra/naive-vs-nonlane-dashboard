@@ -67,7 +67,7 @@ npm run lint
 ## 라우트
 
 - `/naive`: 동기 계산 기반 화면
-- `/non-lane`: 동시성 기능을 적용한 화면
+- `/deffered-transition`: 동시성 기능을 적용한 화면
 
 ## 데이터 및 동작
 
@@ -82,8 +82,8 @@ src/
   api/            // 타입 정의와 더미 데이터 생성
   lib/            // 무거운 파생 계산 로직(computeDashboard)
   components/ui/  // 간단한 차트/툴팁 래퍼
-  screens/        // Naive, NonLane, parts(Charts/Table 분리)
-  App.tsx         // 라우트 구성 (/naive, /non-lane)
+  screens/        // Naive, DefferedTransition, parts(Charts/Table 분리)
+  App.tsx         // 라우트 구성 (/naive, /deffered-transition)
   main.tsx        // 앱 엔트리
   index.css       // Tailwind v4 테마 토큰
 ```

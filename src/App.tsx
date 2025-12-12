@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router";
 import NaiveScreen from "./screens/Naive";
-import NonLaneScreen from "./screens/NonLane";
+import DeferredTransition from "./screens/DeferredTransition";
 import IndexScreen from "./screens/Index";
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
       <Routes>
         <Route path="/" element={<IndexScreen />} />
         <Route path="/naive" element={<NaiveScreen />} />
-        <Route path="/non-lane" element={<NonLaneScreen />} />
+        <Route path="/deferred-transition" element={<DeferredTransition />} />
       </Routes>
     </BrowserRouter>
   );
